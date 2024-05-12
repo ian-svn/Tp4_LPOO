@@ -4,10 +4,8 @@
 #include <string.h>
 
 /*
-versión sin struct
-4)	Modificar dicho programa de manera que me muestre los datos de
-	manera ordenada
-	Según se desee por nombre y apellido o por DNI
+5) 	Guardar Los cambios en un archivo con nombre pertinente sin modificar el original
+	y pudiendo tener acceso a los mismos
 */
 
 void pause();
@@ -118,7 +116,7 @@ void mostrarRegistrosOrdenados() {
             rewind(apl);
         }
     }
-
+    
     fclose(apl);
 }
 
@@ -197,10 +195,8 @@ void ingresoRegistro(){
 		apa = fopen("Registros.txt","a");
 		
 		fprintf(apa,"\n\t%s ,  %s ,  %s",DNI,nombre,apellido);
-		
-	fclose(apa);
 	
-	apa = fopen("RegistrosReserva.txt","a");
+		apa = fopen("Guardado.txt","a");
 		
 		fprintf(apa,"\n\t%s ,  %s ,  %s",DNI,nombre,apellido);
 		
